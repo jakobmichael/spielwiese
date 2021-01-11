@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title> SIVIS Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="simple web calculator">
+    <meta name="author" content="Jakob Luge">
+
+    <link rel="stylesheet" href="calc-style.css">
+    <link rel="stylesheet" href="calc-structure.css">
+
+</head>
+
+<body>
+
+    <h1 id="header">
+        SIVIS - Calculator
+    </h1>
+
+    <div id="outer-form">
+        <form id="output-field">
+
+            <textarea value="" id="display" disabled>
+                
+            </textarea>
+
+        </form>
+
+        <div id="keypad">
+
+            <button type="button" id="one" class="numbers" onclick="display(event)">1</button>
+            <button type="button" id="two" class="numbers" onclick="display(event)">2</button>
+            <button type=" button " id="three " class="numbers " onclick="display(event) ">3</button>
+            <button type="button " id="plus " class="operations " onclick="display(event) ">+</button>
+            <button type="button " id="four " class="numbers " onclick="display(event) ">4</button>
+            <button type="button " id="five " class="numbers " onclick="display(event) ">5</button>
+            <button type="button " id="six " class="numbers " onclick="display(event) ">6</button>
+            <button type="button " id="minus " class="operations " onclick="display(event) ">-</button>
+            <button type="button " id="seven " class="numbers " onclick="display(event) ">7</button>
+            <button type="button " id="eight " class="numbers " onclick="display(event) ">8</button>
+            <button type="button " id="nine " class="numbers " onclick="display(event) ">9</button>
+            <button type="button " id="multiply " class="operations " onclick="display(event)">*</button>
+            <button form="output-field" type="reset" id="clear">c</button>
+            <button type="button " id="zero " class="numbers " onclick="display(event)">0</button>
+            <button type="button " id="equals " class="operations " onclick="calculate(event)">=</button>
+            <button type="button " id="divide " class="operations " onclick="display(event)">/</button>
+
+        </div>
+    </div>
+
+
+
+    <script src="calc-functions.js "></script>
+</body>
+
+</html>

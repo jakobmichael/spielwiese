@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+@media (min-device-width: 1024px) {
+    body {
+        background-color: #656B6D;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    #header {
+        color: #F29224;
+        text-align: center;
+    }
+    #outer-form {
+        background-color: #A0A4A7;
+        border-style: solid;
+        border-color: #FFFFFF;
+        box-shadow: 1px -1px 10px #F29224;
+    }
+    #display {
+        background-image: linear-gradient(to bottom, #FFFFFF, #A0A4A7);
+        border-style: solid;
+        border-color: #FFFFFF;
+        border-width: 1px;
+        border-radius: 3%;
+        box-shadow: 1px -1px 10px #656B6D;
+        font-weight: bold;
+        color: #F29224;
+        resize: none;
+        overflow-y: scroll;
+        white-space: normal;
+        text-align: right;
+        font-family: inherit;
+        font-size: 28px;
+    }
+    #keypad {
+        background-color: transparent;
+    }
+    .numbers {
+        background-image: linear-gradient(to bottom, #FFFFFF, #bfc6cf);
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: large;
+        box-shadow: 1px -1px 10px #656B6D;
+    }
+    .operations {
+        background-color: #000000;
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: large;
+        box-shadow: 1px -1px 3px #000000;
+    }
+    #clear {
+        background-image: linear-gradient(to bottom, #FF0000, #ad0d0d);
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: large;
+        box-shadow: 1px -1px 5px #ad0d0d;
+    }
+}
+
+@media (max-device-width: 1024px) {
+    body {
+        background-color: transparent;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    #header {
+        color: #F29224;
+        text-align: center;
+        font-size: 70px
+    }
+    #outer-form {
+        background-color: #A0A4A7;
+        border-style: solid;
+        border-color: #FFFFFF;
+        border-width: 2px;
+        box-shadow: 1px -1px 30px #F29224;
+    }
+    #display {
+        background-image: linear-gradient(to bottom, #FFFFFF, #A0A4A7);
+        border-style: solid;
+        border-color: #FFFFFF;
+        border-width: 5px;
+        border-radius: 3%;
+        box-shadow: 1px -1px 10px #656B6D;
+        font-weight: bold;
+        color: #F29224;
+        resize: none;
+        overflow-y: scroll;
+        white-space: normal;
+        text-align: right;
+        font-family: inherit;
+        font-size: 100px;
+    }
+    #keypad {
+        background-color: transparent;
+    }
+    .numbers {
+        background-image: linear-gradient(to bottom, #FFFFFF, #bfc6cf);
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: 80px;
+        box-shadow: 1px -1px 10px #656B6D;
+    }
+    .operations {
+        background-color: #000000;
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: 80px;
+        box-shadow: 1px -1px 3px #000000;
+    }
+    #clear {
+        background-image: linear-gradient(to bottom, #FF0000, #ad0d0d);
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 10%;
+        font-weight: bold;
+        font-size: 80px;
+        box-shadow: 1px -1px 5px #ad0d0d;
+    }
+}
