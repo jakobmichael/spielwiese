@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-image: url("./res//img/bg.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.Input {
+  display: flex;
+  justify-content: top;
+  flex-direction: column;
+  max-width: 30%;
+}
+
+.Layout {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}

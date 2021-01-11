@@ -1,0 +1,13 @@
+.WinMessage {
+  z-index: 200;
+  border: 2px solid red;
+  background-color: #fff;
+  position: absolute;
+  top: 20%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  width: 50%;
+}
