@@ -1,0 +1,148 @@
+html {
+  font-family: "Acme", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    45deg,
+    rgba(225, 145, 26, 0.748) 0%,
+    rgb(223, 169, 99) 50%
+  );
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#headbar {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#headbar h1 {
+  padding: 5px 15px 5px;
+  border-radius: 15px;
+  background-color: rgb(175, 175, 175);
+  margin: 0px !important;
+  color: #fff !important;
+  -webkit-text-stroke: 0.8px black;
+  box-shadow: 1px 1px 0px 1px black;
+}
+
+#headbar h1:hover {
+  animation: wiggle 1s infinite alternate;
+}
+
+#historyHeadline {
+  transform: rotate(3deg);
+}
+
+#historyHeadline img {
+  margin-left: 60px;
+  margin-bottom: -10px;
+}
+
+#questionsHeadline {
+  transform: rotate(-2deg);
+}
+
+#questionsHeadline img {
+  margin-left: 200px;
+  margin-bottom: -8px;
+}
+
+#linkHeadline {
+  transform: rotate(1deg);
+}
+
+#linkHeadline img {
+  margin-bottom: -8px;
+}
+
+#linkSendung {
+  text-decoration: none;
+}
+
+#wavingMouse {
+  position: absolute;
+  top: 50%;
+}
+#elefant {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#mouseAge {
+}
+
+#mouseAgeOne {
+  color: #242424;
+  text-shadow: 0 5px black, 0 5px black, 0 5px black;
+  font-size: 500px;
+  margin: 0px !important;
+  font-weight: 800;
+  animation: changeColor 7s infinite 1s alternate;
+}
+#mouseAgeTwo {
+  color: #242424;
+  text-shadow: 0 5px black, 0 5px black, 0 5px black;
+  font-size: 500px;
+  margin: 0px !important;
+  font-weight: 700;
+  animation: changeColor 8s infinite 0s alternate-reverse;
+  transform: rotate(2deg);
+}
+
+#annotation h1{
+    -webkit-text-stroke: 0.8px black;
+    color: #fff;
+    position: relative;
+    font-size: 100px;
+    transform: rotate(20px);
+}
+@keyframes wiggle {
+  20% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  60% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes changeColor {
+  20% {
+    color: darkgoldenrod;
+  }
+  40% {
+    color: darkred;
+  }
+  60% {
+    color: darkgreen;
+  }
+  80% {
+    color: darkblue;
+  }
+  100% {
+    color: darkslateblue;
+  }
+}
