@@ -3,17 +3,19 @@ html {
 }
 
 body {
- 
-  background-color: #f29224db !important;
+  background-image: linear-gradient(45deg,rgba(232, 168, 72, 0.5), rgba(152, 187, 253, 0.486));
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background-image: url("./img/confetti.gif");
-  background-blend-mode: darken;
-  background-size: cover;
+  height: 100vh;
 }
-
 body::-webkit-scrollbar {
   display: none;
+}
+#landingPage {
+  background-image: url("./img/confetti1.gif");
+  background-blend-mode: darken;
+  background-size: auto;
+  height: 100vh;  
 }
 
 #headbar {
@@ -46,13 +48,10 @@ body::-webkit-scrollbar {
   margin-bottom: -10px;
 }
 
-#questionsHeadline {
-  transform: rotate(-2deg);
-}
 
-#questionsHeadline img {
-  margin-left: 200px;
-  margin-bottom: -8px;
+#questionsHeadline {
+  position: relative;
+  transform: rotate(-2deg);
 }
 
 #linkHeadline {
@@ -66,6 +65,9 @@ body::-webkit-scrollbar {
 #linkSendung {
   text-decoration: none;
 }
+#linkQuestions {
+  text-decoration: none;
+}
 
 #wavingMouse {
   position: absolute;
@@ -73,45 +75,74 @@ body::-webkit-scrollbar {
 }
 #elefant {
   position: absolute;
-  top: 45%;
-  left: 80%;
-}
-
-#greeting {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#mouseAge {
+  top: 55vh;
+  left: 80vw;
 }
 
 #mouseAgeOne {
   color: #242424;
   text-shadow: 0 5px black, 0 5px black, 0 5px black;
-  font-size: 500px;
+  font-size: 250px;
   margin: 0px !important;
   font-weight: 800;
-  animation: changeColor 7s infinite 1s alternate;
+  animation: changeColor 7s infinite 0s alternate;
+  transform: rotate(-10deg);
 }
 #mouseAgeTwo {
   color: #242424;
   text-shadow: 0 5px black, 0 5px black, 0 5px black;
-  font-size: 500px;
+  font-size: 250px;
   margin: 0px !important;
   font-weight: 700;
-  animation: changeColor 8s infinite 0s alternate-reverse;
-  transform: rotate(2deg);
+  animation: changeColor 6s infinite 0s alternate-reverse;
+  transform: rotate(10deg);
+}
+#age {  
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  margin-bottom: -40px;
+ }
+
+#greeting {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+#greeting h1 {
+  -webkit-text-stroke: 0.8px black;
+  color: #fff;
+  position: relative;
+  font-size: 90px;
+  margin: 0px;
+  animation: changeColor 4s infinite 0.2s alternate-reverse;
+  transform: rotate(20px);
+  align-self: center;
+}
+#duck {
+  position: absolute;
+  width: 70px;
+  top: 10px
+ }
+
+#shaun {
+  position: absolute;
+  top: 99px;
+  left: -300px;
+  width: 80px;
 }
 
-#annotation h1{
-    -webkit-text-stroke: 0.8px black;
-    color: #fff;
-    position: relative;
-    font-size: 100px;
-    transform: rotate(20px);
+#mouse {
+  position: absolute;
+  top: 130px;
+  left: 160px;
+  width: 90px;
 }
-
 #linkHistory {
   text-decoration: none;
 }
@@ -134,6 +165,9 @@ body::-webkit-scrollbar {
 }
 
 @keyframes changeColor {
+  0% {
+    color: #fff;
+  }
   20% {
     color: darkgoldenrod;
   }

@@ -8,18 +8,18 @@
 /**
  * Define Constants
  */
-define('CHILD_THEME_IE_POP_UP_DARSTELLUNG_VERSION', '1.0.0');
+// define('CHILD_THEME_IE_POP_UP_DARSTELLUNG_VERSION', '1.0.0');
 
 /**
  * Enqueue styles
  */
-function child_enqueue_styles()
-{
+// function child_enqueue_styles()
+// {
 
-    wp_enqueue_style('ie-pop-up-darstellung-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_IE_POP_UP_DARSTELLUNG_VERSION, 'all');
-}
+//     wp_enqueue_style('ie-pop-up-darstellung-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_IE_POP_UP_DARSTELLUNG_VERSION, 'all');
+// }
 
-add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
+// add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
 
 
 $msgDe = "Vielen Dank für Ihren Besuch auf unserer Website. Der von Ihnen verwendete Browser ist veraltet. Dadurch kann es zu Fehlern bei der Darstellung und zu Einschränkungen bei den Funktionalitäten kommen. Bitte verwenden Sie einen anderen Browser, um unsere Webseite im vollen Umfang nutzen zu können. Ihr SIVIS Team";

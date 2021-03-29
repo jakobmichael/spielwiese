@@ -3,18 +3,52 @@
   <head>
     <title>Meine Maus Fragen</title>
     <meta charset="UTF-8" />
+    <meta name="description" content="Stelle der Maus deine eigenen Fragen" />
+    <link rel="stylesheet" href="./mausFragen.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
-    <h1>MEINE MAUSFRAGEN ZUM JUBIÖ&auml;um</h1>
-    <hr />
-    <div id="mausFragenContainer">
-      <form>
-        <label for="meineFrage">Meine Maus Frage</label>
-        <input type="text" name="meineFrage" id="meineFrage" />
-        <label for="meinName">Mein Name</label>
-        <input type="text" id="meinName" name="meinName" />
-        <input type="button" id="submitForm" />
-      </form>
+    <h1 id="headline">Meine Mausfragen zum Jubil&auml;um</h1>
+    <hr/>
+
+    <div id="content">
+      <div id="mausFragenContainer">
+        <form id="mausFragenForm">
+          <label for="meineFrage">Meine Maus Frage</label>
+          <textarea form="mausFragenForm" name="meineFrage" id="meineFrage">
+            Stelle hier deine Frage an die Sendung mit der Maus</textarea
+          >
+          <label for="meinName">Mein Name</label>
+          <input type="text" id="meinName" name="meinName" />
+          <label for="meineMail">Meine Mail</label>
+          <input type="email" id="meineMail" name="meineMail" />
+          <p>&nbsp;</p>
+          <button type="submit" id="submitButton">
+            FRAG DOCH MAL DIE MAUS
+          </button>
+        </form>
+      </div>
+
+      <a id="linkLandingPage" href="./index.html">
+        <div id="linkLandingPageContent">
+          <span class="material-icons"> keyboard_return </span>
+          <h3>Zur&uuml;ck zur Startseite</h3>
+        </div>
+      </a>
     </div>
+    <img
+      alt="Kaeptn Blaubaer"
+      src="./img/kaeptnBlaubaer.png"
+      id="kaeptnBlaubaer"
+    />
+    <img alt="fragende Maus" src="./img/mausFrage.gif" id="fragendeMausGif" />
   </body>
 </html>
