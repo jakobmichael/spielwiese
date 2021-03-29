@@ -75,8 +75,10 @@ body::-webkit-scrollbar {
 }
 #elefant {
   position: absolute;
+  width: 250px;
   top: 55vh;
   left: 80vw;
+  z-index: -1;
 }
 
 #mouseAgeOne {
@@ -96,6 +98,7 @@ body::-webkit-scrollbar {
   font-weight: 700;
   animation: changeColor 6s infinite 0s alternate-reverse;
   transform: rotate(10deg);
+  z-index: 2;
 }
 #age {  
   position: relative;
@@ -139,9 +142,10 @@ body::-webkit-scrollbar {
 
 #mouse {
   position: absolute;
-  top: 130px;
-  left: 160px;
+  top: 133px;
+  left: 170px;
   width: 90px;
+  z-index: -1;
 }
 #linkHistory {
   text-decoration: none;
