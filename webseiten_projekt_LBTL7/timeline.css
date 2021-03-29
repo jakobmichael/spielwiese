@@ -2,7 +2,16 @@
   position: relative;
   padding: 10px 10px 10px 50px;
   max-width: 400px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  height: 90vh;
+  scrollbar-width: none;
 }
+
+.timeline::-webkit-scrollbar {
+    display: none;
+  }
 
 
 .timeline::before {
@@ -13,6 +22,8 @@
   top: 0;
   bottom: 0;
   left: 15px;
+  height: 2500px;
+
 }
 
 

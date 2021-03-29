@@ -18,21 +18,37 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
+#links{
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
 #linkLandingPage {
   text-decoration: none;
   color: #fff;
   letter-spacing: 1px;
   -webkit-text-stroke: 0.8px black;
+  text-align: center;
 }
 #linkLandingPageContent {
+  padding: 2px;
   border: 1px solid #624797;
   border-radius: 5px;
   background-color: #ccc;
-  width: 15%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
+
+#linkHistory {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.8px black;
+ }
 
 #linkLandingPageContent h3 {
   margin: 0px 0px 0px 10px;

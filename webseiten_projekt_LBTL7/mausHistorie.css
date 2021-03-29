@@ -11,8 +11,9 @@ body {
   background-repeat: repeat-y;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 200vh;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -23,16 +24,33 @@ body::-webkit-scrollbar {
   color: #fff;
   letter-spacing: 1px;
   -webkit-text-stroke: 0.8px black;
+  border: 1px solid #734413;
+  border-radius: 5px;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  background-color: #ccc;
+  width: 250px;
+  font-size: 20px;
 }
-#linkLandingPageContent {
-  width: 15%;
+#linkLandingPage {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-#linkLandingPageContent h3 {
-  margin: 0px 0px 0px 10px;
+#linkQuestionPageContent{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.8px black;
+   border-radius: 5px;
+  position: absolute;
+  top: 80%;
+  left:60%;
+  background-color: #ccc;
+  width: 250px;
+  font-size: 20px;
 }
 
 #content {
@@ -43,24 +61,40 @@ body::-webkit-scrollbar {
 }
 
 #headline {
+  position: relative;
   font-size: 50px;
   color: #fff !important;
   -webkit-text-stroke: 0.8px black;
+  height: 700px;
+}
+
+#headline h2 {
   transform: rotate(10deg);
 }
 
 #shaun {
+  width: 500px;
   position: absolute;
-  top: 80%;
-  left: 50%;
-
+  top: 40%;
 }
 
 #elefant {
-width: 200px;
-position: absolute;
-left: 200px;
-top: -10px;
+  width: 200px;
+  position: absolute;
+  left: 200px;
+  top: -10px;
 }
 
+#muenze {
+  width: 60px;
+  position: absolute;
+  top: 70px;
+  left: 300px;
+}
 
+#hecke {
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  top: 75%;
+}
