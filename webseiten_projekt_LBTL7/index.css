@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(45deg,rgba(232, 168, 72, 0.5), rgba(152, 187, 253, 0.486));
+  background-image: linear-gradient(45deg,rgba(232, 168, 72), rgba(152, 187, 253));
   -ms-overflow-style: none;
   scrollbar-width: none;
   height: 100vh;
@@ -146,6 +146,8 @@ body::-webkit-scrollbar {
 #linkHistory {
   text-decoration: none;
 }
+
+
 @keyframes wiggle {
   20% {
     transform: rotate(-2deg);

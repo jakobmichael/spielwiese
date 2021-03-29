@@ -11,34 +11,69 @@
     <meta http-equiv="content-language" content="de" />
     <meta name="author" content="Jakob-Michael Luge" />
     <link rel="stylesheet" href="./mausHistorie.css" />
+    <link rel="stylesheet" href="./timeline.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
-    <div id="mausTimeline">
-      <ul>
-        <li>1970: <i>Lach- und Sachgeschichten für Fernsehanf&auml;nger</i></li>
-        <li>1971: <i>Erstaustrahlung in der ARD</i></li>
-        <li>
-          1972:
-          <i>Sendung wird erstmals unter dem heutigen Namen ausgestrahlt</i>
-        </li>
-        <li>1973<i>Einf&uuml; des zweiten, fremdsprachigen Vorspanns</i></li>
-      </ul>
-    </div>
-    <a id="linkLandingPage" href="./index.html">
-      <div id="linkLandingPageContent">
-        <span class="material-icons">
-          keyboard_return
-          </span>
-        <h3>Zur&uuml;ck zur Startseite</h3>
+    <div id="content">
+      <div class="timeline">
+        <div class="ereignis">
+          <strong class="jahr">1970</strong>
+          <p class="ereignisText">
+            Lach- und Sachgeschichten für Fernsehanf&auml;nger wird erdacht
+          </p>
       </div>
-    </a>
+      <div class="ereignis">
+        <strong class="jahr">1971</strong>
+        
+        <p class="ereignisText">Erstaustrahlung in der ARD</p>
+      </div>
+      <div class="ereignis">
+        <strong class="jahr"> 1972</strong>
+        <p class="ereignisText">
+          Sendung wird erstmals unter dem heutigen Namen ausgestrahlt
+        </p>
+      </div>
+      <div class="ereignis">
+        <strong class="jahr">1973</strong>
+        <p class="ereignisText">Einf&uuml;hrung des zweiten, fremdsprachigen Vorspanns</p>
+      </div>
+      <div class="ereignis">
+        <strong class="jahr">1975</strong>        
+        <img id="elefant" alt="Der Elefant" src="./img/elefant.png" />
+        <p class="ereignisText">Premiere für den Elefanten</p>
+      </div>
+      <div class="ereignis">
+        <strong class="jahr">Dezember 1976</strong>        
+        <img id="armin" alt="Armin Maiwald" src="./img/arminjpeg.jpeg" />
+        <p class="ereignisText">Im Beitrag 'Wasserhahn' ist Armins Kommentierung ist zum ersten Mal zu hören</p>
+      </div>
+      <div class="ereignis">
+        <strong class="jahr">1982</strong><br>       
+        <img id="christoph" alt="Christoph Biemann" src="./img/Christoph.jpeg" />
+        <p class="ereignisText">Erster Auftritt für Christoph im Beitrag 'Tomatenketchup'</p>
+      </div>
+    </div>
+    <div id="headline">
+      <h2>
+        Die Maus bis Heute...
+      </h2>
+    </div>
     <img id="shaun" alt="Shaun das Schaf" src="./img/shaun.png" />
+  </div>
+  <a id="linkLandingPage" href="./index.html">
+    <div id="linkLandingPageContent">
+      <span class="material-icons"> keyboard_return </span>
+      <h3>Zur&uuml;ck zur Startseite</h3>
+    </div>
+  </a>
   </body>
-
-</html>
+  </html>

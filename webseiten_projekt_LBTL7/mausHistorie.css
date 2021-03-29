@@ -5,12 +5,13 @@ html {
 body {
   background-image: linear-gradient(
     45deg,
-    rgba(232, 168, 72, 0.5),
-    rgba(152, 187, 253, 0.486)
+    rgba(232, 168, 72),
+    rgb(152, 187, 253)
   );
+  background-repeat: repeat-y;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 100vh;
+  height: 200vh;
   position: relative;
 }
 body::-webkit-scrollbar {
@@ -33,4 +34,33 @@ body::-webkit-scrollbar {
 #linkLandingPageContent h3 {
   margin: 0px 0px 0px 10px;
 }
+
+#content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#headline {
+  font-size: 50px;
+  color: #fff !important;
+  -webkit-text-stroke: 0.8px black;
+  transform: rotate(10deg);
+}
+
+#shaun {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+
+}
+
+#elefant {
+width: 200px;
+position: absolute;
+left: 200px;
+top: -10px;
+}
+
 
