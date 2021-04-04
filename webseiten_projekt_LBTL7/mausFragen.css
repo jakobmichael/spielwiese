@@ -3,7 +3,11 @@ html {
 }
 
 body {
-    background-image: linear-gradient(45deg,rgba(232, 168, 72), rgba(152, 187, 253));
+  background-image: linear-gradient(
+    45deg,
+    rgba(232, 168, 72),
+    rgba(152, 187, 253)
+  );
   -ms-overflow-style: none;
   scrollbar-width: none;
   height: 100vh;
@@ -16,42 +20,39 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
   -webkit-text-stroke: 0.8px black;
   color: #fff;
+  text-align: center;
 }
 
-#links{
-  width: 400px;
+
+
+.linkContainer {
+  border-radius: 5px;
+  background-color: #ccc;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 1px 1px #000;
+  padding: 5px;
+}
+
+.linkContainer a {
+
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.8px black;
+}
+
+
+#links {
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+  margin-top: 10%;
 }
 
-#linkLandingPage {
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 0.8px black;
-  text-align: center;
-}
-#linkLandingPageContent {
-  padding: 2px;
-  border: 1px solid #624797;
-  border-radius: 5px;
-  background-color: #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#linkHistory {
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 0.8px black;
- }
-
-#linkLandingPageContent h3 {
-  margin: 0px 0px 0px 10px;
+.linkContainer a h3 {
+  margin: 0;
 }
 
 #mausFragenContainer {
@@ -61,7 +62,7 @@ body::-webkit-scrollbar {
 #mausFragenContainer form {
   display: grid;
   grid-template-columns: 30% 30%;
-  grid-template-rows: 80% 20% 20% 20%; 
+  grid-template-rows: 80% 20% 20% 20%;
   grid-row-gap: 20px;
 }
 
@@ -117,15 +118,14 @@ body::-webkit-scrollbar {
 }
 
 #kaeptnBlaubaer {
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: scaleX(-1);
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: scaleX(-1);
 }
-#fragendeMausGif{
-    position: absolute;
-    width: 70px;
-    top: 20px;
-    left: 40%;
-
+#fragendeMausGif {
+  position: absolute;
+  width: 70px;
+  top: 20px;
+  left: 90%;
 }
