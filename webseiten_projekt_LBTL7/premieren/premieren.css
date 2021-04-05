@@ -1,5 +1,7 @@
 html {
   font-family: "Acme", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -8,16 +10,18 @@ body {
     rgba(232, 168, 72),
     rgb(152, 187, 253)
   );
-  background-repeat: repeat-y;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   height: 100vh;
+  background-repeat: repeat-y;
   position: relative;
   overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-body::-webkit-scrollbar {
+
+html::-webkit-scrollbar {
   display: none;
 }
+
 #headline {
   text-transform: uppercase;
   -webkit-text-stroke: 0.8px black;
@@ -31,32 +35,31 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
-
 table {
   color: #fff;
   -webkit-text-stroke: 0.8px black;
   font-size: 22px;
-  width: 50%;  
+  width: 50%;
   padding: 0;
   border-radius: 5px;
-  
-  
 }
 
- th, td {
-    border: 1px solid #fff;
-    text-align: center;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.33);
+th,
+td {
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.33);
 }
 
-.linkContainer { 
-   border-radius: 5px; 
+.linkContainer {
+  position: relative;
+  border-radius: 5px;
   background-color: #ccc;
-    width: 250px;
+  width: 250px;
   font-size: 20px;
   text-align: center;
-    padding: 5px;
+  padding: 5px;
   box-shadow: 2px 2px 1px 1px #000;
 }
 
@@ -66,18 +69,22 @@ table {
 
 .linkContainer a {
   text-decoration: none;
-   color: #fff;
+  color: #fff;
   letter-spacing: 1px;
   -webkit-text-stroke: 0.8px black;
 }
 
-
-
-#links{
+#links {
   width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 10%;
-  
+}
+#blumenMaus {
+  width: 650px;
+  position: absolute;
+  left: -50%;
+  top: -340px;
+  z-index: -1;
 }

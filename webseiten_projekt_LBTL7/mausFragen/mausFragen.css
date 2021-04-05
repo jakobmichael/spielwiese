@@ -1,5 +1,7 @@
 html {
   font-family: "Acme", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -12,7 +14,7 @@ body {
   scrollbar-width: none;
   height: 100vh;
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -22,8 +24,6 @@ body::-webkit-scrollbar {
   color: #fff;
   text-align: center;
 }
-
-
 
 .linkContainer {
   border-radius: 5px;
@@ -35,33 +35,34 @@ body::-webkit-scrollbar {
 }
 
 .linkContainer a {
-
   text-decoration: none;
   color: #fff;
   letter-spacing: 1px;
   -webkit-text-stroke: 0.8px black;
 }
 
-
+.linkContainer a h3 {
+  margin: 0;
+}
 #links {
   width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 10%;
-}
-
-.linkContainer a h3 {
-  margin: 0;
+  margin-top: 20%;
 }
 
 #mausFragenContainer {
-  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #mausFragenContainer form {
+  justify-content: center;
+  width: 100%;
   display: grid;
-  grid-template-columns: 30% 30%;
+  grid-template-columns: 10% 30%;
   grid-template-rows: 80% 20% 20% 20%;
   grid-row-gap: 20px;
 }
@@ -104,13 +105,14 @@ body::-webkit-scrollbar {
   height: 60%;
   border-radius: 5px;
   font-family: "Acme", sans-serif;
-  cursor: url("./img/flyingDuckCursor.png"), pointer;
+  cursor: url("../resources/img/flyingDuckCursor.png"), pointer;
 }
 
 #submitButton:focus {
   border: 2px solid #624797;
   outline: none;
 }
+
 #content {
   display: flex;
   flex-direction: column;

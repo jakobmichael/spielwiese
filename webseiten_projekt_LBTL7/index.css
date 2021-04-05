@@ -1,21 +1,27 @@
 html {
   font-family: "Acme", sans-serif;
+  background-image: url("./resources/img/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: 2000px;
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
-  background-image: linear-gradient(45deg,rgba(232, 168, 72), rgba(152, 187, 253));
   -ms-overflow-style: none;
   scrollbar-width: none;
   height: 100vh;
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
+
 #landingPage {
-  background-image: url("./img/confetti1.gif");
+  background-image: url("./resources/img/confetti1.gif");
   background-blend-mode: darken;
   background-size: auto;
-  height: 100vh;  
+  height: 100vh;
 }
 
 #headbar {
@@ -39,33 +45,31 @@ body::-webkit-scrollbar {
   animation: wiggle 1s infinite alternate;
 }
 
-#historyHeadline {
+#linkHistory {
   transform: rotate(3deg);
+  text-decoration: none;
 }
 
-#historyHeadline img {
+#linkHistory img {
   margin-left: 60px;
   margin-bottom: -10px;
 }
 
-
-#questionsHeadline {
-  position: relative;
+#linkPremiere {
   transform: rotate(-2deg);
+  text-decoration: none;
 }
-
-#linkHeadline {
-  transform: rotate(1deg);
-}
-
-#linkHeadline img {
-  margin-bottom: -8px;
+#linkHistory {
+  text-decoration: none;
 }
 
 #linkSendung {
+  transform: rotate(-3deg);
   text-decoration: none;
 }
+
 #linkQuestions {
+  transform: rotate(1deg);
   text-decoration: none;
 }
 
@@ -75,9 +79,39 @@ body::-webkit-scrollbar {
 }
 #elefant {
   position: absolute;
-  width: 250px;
-  top: 55vh;
-  left: 80vw;
+  width: 220px;
+  top: 65%;
+  left: 80%;
+  z-index: -1;
+}
+
+#schafherde {
+  position: fixed;
+  width: 260px;
+  top: 505px;
+  left: 1300px;
+  transform: rotate(5deg);
+}
+
+#duck {
+  position: absolute;
+  width: 70px;
+  top: 10px;
+}
+
+#shaun {
+  position: absolute;
+  top: 165px;
+  left: 270px;
+  width: 80px;
+  z-index: -1;
+}
+
+#mouse {
+  position: absolute;
+  top: 133px;
+  left: 170px;
+  width: 90px;
   z-index: -1;
 }
 
@@ -100,22 +134,22 @@ body::-webkit-scrollbar {
   transform: rotate(10deg);
   z-index: 2;
 }
-#age {  
+#age {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-top: -50px;
   margin-bottom: -40px;
- }
+}
 
 #greeting {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-   display: flex;
+  position: relative;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 #greeting h1 {
   -webkit-text-stroke: 0.8px black;
@@ -127,30 +161,6 @@ body::-webkit-scrollbar {
   transform: rotate(20px);
   align-self: center;
 }
-#duck {
-  position: absolute;
-  width: 70px;
-  top: 10px
- }
-
-#shaun {
-  position: absolute;
-  top: 99px;
-  left: -300px;
-  width: 80px;
-}
-
-#mouse {
-  position: absolute;
-  top: 133px;
-  left: 170px;
-  width: 90px;
-  z-index: -1;
-}
-#linkHistory {
-  text-decoration: none;
-}
-
 
 @keyframes wiggle {
   20% {
