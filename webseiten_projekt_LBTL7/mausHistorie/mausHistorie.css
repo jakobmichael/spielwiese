@@ -3,46 +3,31 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-    45deg,
-    rgba(232, 168, 72),
-    rgb(152, 187, 253)
-  );
-  background-repeat: repeat-y;
+  background-image: url("../resources/img/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 100vh;
   position: relative;
   overflow: hidden;
+  overflow-y: scroll;
 }
 body::-webkit-scrollbar {
   display: none;
-}
-
-#linkLandingPage {
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 0.8px black;
-}
-
-#linkQuestions {
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 0.8px black;
 }
 
 .linkContainer {
   border-radius: 5px;
   background-color: #ccc;
   font-size: 20px;
+  height: 30px;
   box-shadow: 2px 2px 1px 1px #000;
   z-index: 3;
   width: 50%;
   padding: 5px;
-margin: 5px;
-margin-left: 25%;
+  margin: 5px;
+  margin-left: 25%;
 }
 
 .linkContainer a {
@@ -57,14 +42,24 @@ margin-left: 25%;
   margin: 0;
 }
 
+.linkContainer:hover a {
+  color: #dc5f1e;
+  font-size: 25px;
+}
+
 #links {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 70%;
+  margin-top: 50%;
 }
 
 #content {
+  padding: 10px 0px 10px 0px;
+  background-color: rgba(209, 209, 209, 0.768);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 2%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -86,7 +81,7 @@ margin-left: 25%;
 #shaun {
   width: 500px;
   position: absolute;
-  top: 40%;
+  top: 23%;
   left: 20%;
   z-index: 1;
 }
@@ -109,7 +104,7 @@ margin-left: 25%;
   position: absolute;
   width: 700px;
   height: 300px;
-  top: 75%;
+  top: 55%;
   z-index: 2;
 }
 
@@ -118,15 +113,12 @@ margin-left: 25%;
   padding: 10px 10px 10px 50px;
   max-width: 400px;
   overflow-y: scroll;
-  -ms-overflow-style: none;
-  overflow-x: hidden;
+   overflow-x: hidden;
   height: 90vh;
-  scrollbar-width: none;
+
+ 
 }
 
-.timeline::-webkit-scrollbar {
-    display: none;
-  }
 
 
 .timeline::before {
@@ -138,9 +130,7 @@ margin-left: 25%;
   bottom: 0;
   left: 15px;
   height: 2500px;
-
 }
-
 
 .ereignis {
   padding: 20px 30px;
@@ -151,17 +141,15 @@ margin-left: 25%;
   border: 1px solid #dc5f1e;
 }
 
-
 .jahr {
   font-size: 1.1em;
   font-weight: bold;
-  color:  #734413;
+  color: #734413;
 }
 .ereignisText {
   margin: 10px 0 0 0;
   color: #222;
 }
-
 
 .ereignis::before {
   content: "";
@@ -172,7 +160,6 @@ margin-left: 25%;
   top: 20%;
   left: -10px;
 }
-
 
 .ereignis::after {
   content: "";

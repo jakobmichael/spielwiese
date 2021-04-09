@@ -18,7 +18,6 @@
   <body>
     <h1 id="headline">Meine Mausfragen zum Jubil&auml;um</h1>
     <hr />
-
     <div id="content">
       <div id="mausFragenContainer">
         <form id="mausFragenForm">
@@ -30,40 +29,82 @@
           <input type="text" id="meinName" name="meinName" />
           <label for="meineMail">Meine Mail</label>
           <input type="email" id="meineMail" name="meineMail" />
+          <label for="meineNummer">Meine Telefonnummer</label>
+          <input type="tel" id="meineNummer" name="meineNummer" />
           <p>&nbsp;</p>
           <button type="submit" id="submitButton">
             FRAG DOCH MAL DIE MAUS
           </button>
         </form>
       </div>
-
-      <div id="links">
-        <div class="linkContainer">
-          <a id="linkLandingPage" href="../index.html">
-            <h3>Zur&uuml;ck zur Startseite</h3>
-          </a>
+      <fieldset id="checkboxes">
+        <div>
+          <input type="checkbox" name="berechtigung" value="agb" />
+          <label for="agb"
+            >Ich akzeptere die AGB´s & Datenschutzrichtlinen</label
+          >
         </div>
-
-          <div class="linkContainer">
-            <a id="linkUebersicht" href="../premieren/premieren.html">
-              <h3 id="linkHeader">Premieren&uuml;bersicht</h3>
-            </a>
-          </div>
-        
-
-        <div class="linkContainer">
-          <a id="linkHistory" href="../mausHistorie/mausHistorie.html">
-            <h3>Zur Maus Historie</h3>
-          </a>
+        <div>
+          <input type="checkbox" name="berechtigung" value="kontaktieren" />
+          <label for="kontaktieren"
+            >Das Maus-Team darf mich bei Rückfragen kontaktieren</label
+          >
         </div>
+      </fieldset>
+    </div>
+    <div id="links">
+      <div class="linkContainer">
+        <a id="linkLandingPage" href="../index.html">
+          <h3>Zur&uuml;ck zur Startseite</h3>
+        </a>
       </div>
+
+      <div class="linkContainer">
+        <a id="linkUebersicht" href="../premieren/premieren.html">
+          <h3 id="linkHeader">Premieren&uuml;bersicht</h3>
+        </a>
+      </div>
+
+      <div class="linkContainer">
+        <a id="linkHistory" href="../mausHistorie/mausHistorie.html">
+          <h3>Zur Maus Historie</h3>
+        </a>
+      </div>
+    </div>
+    <div id="frameOne">
+      <img
+        alt="Shaun und seine Freunde"
+        src="../resources/img/schafe.jpeg"
+        width="300px"
+        height="200px"
+      />
+    </div>
+    <div id="frameTwo">
+      <img
+        alt="Käptn Blaubär und seine Enkel"
+        src="../resources/img/käptnBlaubärEnkel.jpeg"
+        width="400px"
+        height="230px"
+      />
+    </div>
+    <div id="frameThree">
+      <img
+        alt="Der kleine Maulwurf"
+        src="../resources/img/maulwurf.jpg"
+        width="200px"
+        height="130px"
+      />
     </div>
     <img
       alt="Kaeptn Blaubaer"
       src="../resources/img/kaeptnBlaubaer.png"
       id="kaeptnBlaubaer"
     />
-    <img alt="fragende
-     Maus" src="../resources/img/mausFrage.gif" id="fragendeMausGif" />
+    <img
+      alt="fragende
+     Maus"
+      src="../resources/img/mausFrage.gif"
+      id="fragendeMausGif"
+    />
   </body>
 </html>

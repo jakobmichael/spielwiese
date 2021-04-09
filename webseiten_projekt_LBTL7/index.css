@@ -1,8 +1,9 @@
 html {
   font-family: "Acme", sans-serif;
-  background-image: url("./resources/img/background.jpeg");
+  background-image: url("./resources/img/wallpaper.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 2000px;
+   background-position: 0;
   position: relative;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -29,68 +30,40 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: rgb(208, 205, 205);
+  border-radius: 10px;
+  height: 50px;
+  border: 1px solid #000;
 }
 
 #headbar h1 {
   padding: 5px 15px 5px;
-  border-radius: 15px;
-  background-color: rgb(175, 175, 175);
   margin: 0px !important;
-  color: #fff !important;
+  color: #fff;
   -webkit-text-stroke: 0.8px black;
-  box-shadow: 1px 1px 0px 1px black;
 }
 
 #headbar h1:hover {
-  animation: wiggle 1s infinite alternate;
+  font-size: 40px;
+  color: #dc5f1e;
 }
 
-#linkHistory {
-  transform: rotate(3deg);
-  text-decoration: none;
-}
-
-#linkHistory img {
-  margin-left: 60px;
-  margin-bottom: -10px;
-}
-
-#linkPremiere {
-  transform: rotate(-2deg);
-  text-decoration: none;
-}
-#linkHistory {
-  text-decoration: none;
-}
-
-#linkSendung {
-  transform: rotate(-3deg);
-  text-decoration: none;
-}
-
-#linkQuestions {
-  transform: rotate(1deg);
+#headbar a {
   text-decoration: none;
 }
 
 #wavingMouse {
   position: absolute;
-  top: 50%;
+  top: -235px;
+  width: 250px;
+  left: -50px;
+  z-index: -1;
 }
 #elefant {
   position: absolute;
   width: 220px;
-  top: 65%;
-  left: 80%;
-  z-index: -1;
-}
-
-#schafherde {
-  position: fixed;
-  width: 260px;
-  top: 505px;
-  left: 1300px;
-  transform: rotate(5deg);
+  top: -200px;
+  left: 150px;
 }
 
 #duck {
@@ -102,7 +75,7 @@ html::-webkit-scrollbar {
 #shaun {
   position: absolute;
   top: 165px;
-  left: 270px;
+  left: 250px;
   width: 80px;
   z-index: -1;
 }
@@ -112,6 +85,14 @@ html::-webkit-scrollbar {
   top: 133px;
   left: 170px;
   width: 90px;
+  z-index: -1;
+}
+
+#schafherde {
+  position: absolute;
+  width: 300px;
+  top: -80px;
+  left: 80%;
   z-index: -1;
 }
 
@@ -143,6 +124,8 @@ html::-webkit-scrollbar {
 }
 
 #greeting {
+  z-index: -1;
+  width: 50%;
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -150,6 +133,9 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(209, 209, 209, 0.768);
+  border: 2px solid black;
+  border-radius: 10px;
 }
 #greeting h1 {
   -webkit-text-stroke: 0.8px black;
@@ -162,22 +148,48 @@ html::-webkit-scrollbar {
   align-self: center;
 }
 
-@keyframes wiggle {
-  20% {
-    transform: rotate(-2deg);
-  }
-  40% {
-    transform: rotate(1deg);
-  }
-  60% {
-    transform: rotate(-1deg);
-  }
-  80% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(-1deg);
-  }
+#frameOne {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  transform: rotate(6deg);
+  z-index: -1;
+  border: 2px solid #000;
+  width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+#frameTwo {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: rotate(10deg);
+  border: 2px solid #000;
+  width: 350px;
+  height: 280px;
+  border-radius: 10px;
+}
+
+#frameThree {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  transform: rotate(-5deg);
+  z-index: -1;
+  border: 2px solid #000;
+  width: 300px;
+  height: 190px;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+iframe {
+  border-radius: 10px;
 }
 
 @keyframes changeColor {
@@ -200,3 +212,4 @@ html::-webkit-scrollbar {
     color: darkslateblue;
   }
 }
+
