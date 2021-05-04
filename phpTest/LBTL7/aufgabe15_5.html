@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form action="bestellung.php" method="GET">
+        <fieldset>
+            <legend>Ihre Pizza Wahl</legend>
+            <p>
+            <h4>Pizza Margherita</h4>
+            <ul>
+                <li>Tomaten</li>
+                <li>Basilikum</li>
+                <li>Mozarella K&auml;se</li>
+            </ul>
+            <img src="https://dierezepte.com/wp-content/uploads/2019/08/pizza-margherita.jpg" width="200px">
+            <h5>7,00 EUR</h5>
+            <input type="number" name="marg" step="1" min="0" max="9" value="0">
+            </p>
+            <p>
+            <h4>Pizza Funghi</h4>
+            <ul>
+                <li>Tomatensoße</li>
+                <li>Knoblauch</li>
+                <li>Pilze</li>
+                <li>Basilikum</li>
+                <li>Mozarella K&auml;se</li>
+            </ul>
+            <img src="https://cdn.gutekueche.de/upload/rezept/5019/1600x1200_pizza-funghi.jpg" width="200px">
+            <h5>8,00 EUR</h5>
+            <input type="number" name="fung" step="1" min="0" max="9" value="0">
+            </p>
+            <p>
+            <h4>Pizza Hawaii</h4>
+            <ul>
+                <li>Tomatensoße</li>
+                <li>Schinken</li>
+                <li>Ananas</li>
+                <li>Mozarella K&auml;se</li>
+            </ul>
+            <img src="https://www.springlane.de/magazin/wp-content/uploads/2017/03/Pizza-Hawaii.jpg" width="200px">
+            <h5>8,50 EUR</h5>
+            <input type="number" name="hawa" step="1" min="0" max="9" value="0">
+            </p>
+            <p>
+            <h4>Pizza Quattro Formaggi</h4>
+            <ul>
+                <li>Tomatensoße</li>
+                <li>Blauschimmelk&auml;se</li>
+                <li>Mozarella K&auml;se</li>
+                <li>Parmesan</li>
+                <li>Emmentaler K&auml;se</li>
+                <li>Basilikum</li>
+            </ul>
+            <img src="https://img.chefkoch-cdn.de/rezepte/3287911488232655/bilder/1105077/crop-960x720/pizza-4-kaese.jpg"
+                width="200px">
+            <h5>8,00 EUR</h5>
+            <input type="number" name="form" step="1" min="0" max="9" value="0">
+            </p>
+            <p>
+            <h4>Pizza Vegetaria</h4>
+            <ul>
+                <li>Tomatensoße</li>
+                <li>Veganer K&auml;se</li>
+                <li>Brokkoli</li>
+                <li>Aubergine</li>
+                <li>Paprika</li>
+                <li>Zuchini</li>
+                <li>Basilikum</li>
+            </ul>
+            <img src="https://img.chefkoch-cdn.de/rezepte/3287911488232655/bilder/1105077/crop-960x720/pizza-4-kaese.jpg"
+                width="200px">
+            <h5>9,00 EUR</h5>
+            <input type="number" name="vege" step="1" min="0" max="9" value="0">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Lieferung</legend>
+            <p>
+                <input type="radio" name="lieferung" value="lieferung">
+                <label for="lieferung">Wir liefern Ihre Bestellung</label>
+            
+                <input type="radio" name="lieferung" value="abholung">
+                <label for="abhlung">Ich hole meine Bestellung selbst ab</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Aktion</legend>
+            <p>
+                <label for="bonuskarte">Ihre Bonuskarte</label>
+                <input type="text" name="bonuskarte">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Bestelldaten</legend>
+            <p>
+                <label for="vorname">Vorname</label>
+                <input type="text" name="vorname" maxlength="30" required />
+            </p>
+
+            <p>
+                <label for="zuname">Zuname</label>
+                <input type="text" name="zuname" maxlength="30" required />
+            </p>
+
+
+            <p>
+                <label for="stra&szlig;e">Stra&szlig;e</label>
+                <input type="text" name="stra&szlig;" maxlength="30" required />
+
+                <label for="hausnummer">Hausnummer</label>
+                <input type="text" name="hausnummer" maxlength="4" required />
+            </p>
+            <p>
+                <label for="plz">PLZ</label>
+                <input type="text" name="plz" maxlength="5" placeholder="76131" required />
+
+                <label for="wohnort">Wohnort</label>
+                <input type="text" name="wohnort" maxlength="30" placeholder="Karlsruhe" required />
+            </p>
+            <p>
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" name="phone" maxlength="35" required />
+            </p>
+        </fieldset>
+        <p>
+            <button type="reset">Zur&uuml;cksetzen</button>
+        </p>
+        <p>
+            <button type="submit">Bestellung absenden</button>
+        </p>
+    </form>
+</body>
+
+</html>
