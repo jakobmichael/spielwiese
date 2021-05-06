@@ -22,25 +22,31 @@ public class StudentManagementController {
     private static final List<Student> studentsList = Arrays.asList(new Student(1, "James Bond"),
             new Student(2, "Ada Lovelace"), new Student(3, "Rosa Parks"));
 
-//@PreAuthorize("hasRole('ROLE_')" / "hasAnyRole('ROLE_')" / "hasAuthority('permission')" / "hasAnyAuthority('permissions')")
-//alternative to whitelisting endpoits with antMatchers(), needs @EnableGlobalMethodSecurity(prePostEnabled = true) at top of security config
+    // @PreAuthorize("hasRole('ROLE_')" / "hasAnyRole('ROLE_')" /
+    // "hasAuthority('permission')" / "hasAnyAuthority('permissions')")
+    // alternative to whitelisting endpoits with antMatchers(), needs
+    // @EnableGlobalMethodSecurity(prePostEnabled = true) at top of security config
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public List<Student> getAllStudents() {
         return studentsList;
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('student:write')")
     public void registerNewStudent(Student student) {
         System.out.println("registerNewStudent");
     }
 
     @DeleteMapping(path = "{studentId}")
+    @PreAuthorize("hasAuthority('student:write')")
     public void deleteStudent(@PathVariable("studentId") Integer studentId) {
         System.out.println("deleteStudent");
     }
 
     @PutMapping(path = "{studentId}")
+    @PreAuthorize("hasAuthority('student:write')")
     public void updateStudent(@PathVariable("studentId") Integer studentId, @RequestBody Student student) {
         System.out.println("updateStudent");
     }
