@@ -2,14 +2,20 @@ package com.example.springsecuritydemo.security;
 
 import java.util.concurrent.TimeUnit;
 
+import com.example.springsecuritydemo.auth.ApplicationUserService;
+import com.example.springsecuritydemo.jwt.JwtUsernameAndPasswordAuthenticationFilter;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
@@ -24,10 +30,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final PasswordEncoder passwordEncoder;
+    private final ApplicationUserService applicationUserService;
 
     @Autowired
-    public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
+    public ApplicationSecurityConfig(PasswordEncoder passwordEncoder, ApplicationUserService applicationUserService) {
         this.passwordEncoder = passwordEncoder;
+        this.applicationUserService = applicationUserService;
     }
 
     // configures Authorization for be basic Auth, authorize each request with
@@ -37,14 +45,17 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         http
         // .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
         .csrf().disable()
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+        .addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager()))
         .authorizeRequests()
                 // antMatchers allows to whitelist certain endpoints
                 .antMatchers("/css/*", "/js/*").permitAll()
                 .antMatchers("/api/**")
-                .hasRole(ApplicationUserRole.STUDENT.name()).anyRequest().authenticated()
-                .and()
+                .hasRole(ApplicationUserRole.STUDENT.name()).anyRequest().authenticated();
+                //.and()
                 //.httpBasic(); BasicAuth -> authenticate each request
-                .formLogin()
+                /*.formLogin()
                 .loginPage("/login").permitAll()
                 .defaultSuccessUrl("/courses",true)
                 .and()
@@ -57,23 +68,21 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .clearAuthentication(true)
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID", "remember-me")
-                .logoutSuccessUrl("/login");
+                .logoutSuccessUrl("/login"); --! only needed for form based login*/
+            
     }
 
     @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(daoAuthenticationProvider());
+    }
+
     @Bean
-    protected UserDetailsService userDetailsService() {
-        UserDetails jakoblugeUser = User.builder().username("Jakob").password(passwordEncoder.encode("password"))
-                .authorities(ApplicationUserRole.ADMIN.getGrantedAuthorities()).build();
-
-        UserDetails mariaUser = User.builder().username("Maria").password(passwordEncoder.encode("password"))
-                .authorities(ApplicationUserRole.STUDENT.getGrantedAuthorities()).build();
-
-        UserDetails tomUser = User.builder().username("Tom").password(passwordEncoder.encode("password"))
-                .authorities(ApplicationUserRole.ADMINTRAINEE.getGrantedAuthorities()).build();
-
-        return new InMemoryUserDetailsManager(jakoblugeUser, mariaUser, tomUser
-
-        );
+    public DaoAuthenticationProvider daoAuthenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setPasswordEncoder(passwordEncoder);
+        provider.setUserDetailsService(applicationUserService);
+        
+        return provider;
     }
 }

@@ -32,7 +32,6 @@ public enum ApplicationUserRole {
 
         Set<GrantedAuthority> permissions = getPermissions().stream()
                 .map(permission -> new SimpleGrantedAuthority(permission.getPermission())).collect(Collectors.toSet());
-        System.out.println(this.name());
         permissions.add(new SimpleGrantedAuthority("ROLE_" + this.name()));
 
         return permissions;

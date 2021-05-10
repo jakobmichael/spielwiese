@@ -1,14 +1,14 @@
 package com.example.springsecuritydemo.auth;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Set;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class ApplicationUser implements UserDetails {
 
-    private final List<? extends GrantedAuthority> grantedAuthoritites;
+    private final Set<? extends GrantedAuthority> grantedAuthoritites;
     private final String password;
     private final String userName;
     private final boolean isAccountNonLocked;
@@ -16,7 +16,7 @@ public class ApplicationUser implements UserDetails {
     private final boolean isCredentialsNonExpired;
     private final boolean isEnabled;
 
-    public ApplicationUser(List<? extends GrantedAuthority> grantedAuthoritites, String password, String userName,
+    public ApplicationUser(String userName, String password, Set<? extends GrantedAuthority> grantedAuthoritites, 
             boolean isAccountNonLocked, boolean isAccountNonExpired, boolean isCredentialsNonExpired,
             boolean isEnabled) {
         this.grantedAuthoritites = grantedAuthoritites;
