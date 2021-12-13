@@ -1,12 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
+import MaterialUi from "./components/materialUi/MaterialUi";
+import ReactBootstrap from "./components/reactBootstrap/ReactBootstrap";
 
 function App() {
   return (
     <div className="App">
-      <div></div>
-      <div></div>
+      <MaterialUi />
+      <ReactBootstrap />
     </div>
   );
 }
