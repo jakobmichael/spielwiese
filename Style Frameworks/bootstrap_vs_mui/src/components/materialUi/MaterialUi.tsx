@@ -1,22 +1,10 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Button,
-  Container,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
-  Typography,
-  Toolbar,
-} from "@mui/material";
+import { Container } from "@mui/material";
 import CustomDrawer from "./drawer/CustomDrawer";
 import MuiAppbar from "./appbar/MuiAppbar";
 import CustomCardMui from "./card/CustomCardMui";
 import CustomTableMui from "./table/CustomTableMui";
 import { ITableRows } from "../../App";
-type Anchor = "top" | "left" | "bottom" | "right";
 
 export interface IVisibleMuiComponentState {
   [index: string]: boolean;
@@ -29,6 +17,8 @@ interface IMaterialUiProps {
   rows: ITableRows[];
   headers: string[];
 }
+
+type Anchor = "top" | "left" | "bottom" | "right";
 
 const MaterialUi = (props: IMaterialUiProps) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -59,7 +49,7 @@ const MaterialUi = (props: IMaterialUiProps) => {
   return (
     <div style={{ width: "49%" }}>
       <MuiAppbar toggleDrawer={toggleDrawer} />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={{ padding: "5%" }}>
         <CustomDrawer
           openDrawer={openDrawer}
           testComponents={testComponents}

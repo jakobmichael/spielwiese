@@ -1,11 +1,11 @@
 import * as React from "react";
 import {
-  TableContainer,
   Paper,
+  TableBody,
+  TableCell,
+  TableContainer,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
 } from "@mui/material";
 import { Table } from "react-bootstrap";
 import { ITableRows } from "../../../App";

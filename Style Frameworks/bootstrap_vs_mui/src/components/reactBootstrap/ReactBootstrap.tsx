@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { ITableRows } from "../../App";
 import CustomCardRb from "./card/CustomCardRb";
 import BootstrapNavbar from "./navbar/BootstrapNavbar";
@@ -33,7 +33,7 @@ const ReactBootstrap = (props: IReactBootstrapProps) => {
         testComponents={testComponents}
         setVisibleComponent={setVisibleRBComponent}
       />
-      <Container fluid="xl">
+      <Container fluid="xl" style={{ padding: "2%" }}>
         {visibleRBComponent.RBCard ? <CustomCardRb /> : null}
         {visibleRBComponent.RBTable ? (
           <CustomTableRb rows={props.rows} headers={props.headers} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { IVisibleRBComponentState } from "../ReactBootstrap";
 
 interface IBootstrapNavbarProps {
