@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import BootstrapNavbar from "./Navbar/BootstrapNavbar";
+import { ITableRows } from "../../App";
+import CustomCardRb from "./card/CustomCardRb";
+import BootstrapNavbar from "./navbar/BootstrapNavbar";
+import CustomTableRb from "./table/CustomTableRb";
 
 export interface IVisibleRBComponentState {
   [index: string]: boolean;
@@ -9,7 +12,12 @@ export interface IVisibleRBComponentState {
   RBTable: boolean;
 }
 
-const ReactBootstrap = () => {
+interface IReactBootstrapProps {
+  rows: ITableRows[];
+  headers: string[];
+}
+
+const ReactBootstrap = (props: IReactBootstrapProps) => {
   const testComponents: string[] = ["RBCard", "RBForm", "RBTable"];
 
   const [visibleRBComponent, setVisibleRBComponent] =
@@ -26,7 +34,10 @@ const ReactBootstrap = () => {
         setVisibleComponent={setVisibleRBComponent}
       />
       <Container fluid="xl">
-        {visibleRBComponent.RBCard ? <h5>card</h5> : null}
+        {visibleRBComponent.RBCard ? <CustomCardRb /> : null}
+        {visibleRBComponent.RBTable ? (
+          <CustomTableRb rows={props.rows} headers={props.headers} />
+        ) : null}
       </Container>
     </div>
   );

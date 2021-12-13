@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardMedia } from "@mui/material";
-import sivislogo from "../../../assets/images/sivislogo.jpg";
+import sivislogo from "../../../assets/images/sivislogo.png";
 
 const bull = (
   <Box
@@ -17,9 +17,9 @@ const bull = (
   </Box>
 );
 
-const CustomCard = () => {
+const CustomCardMui = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 245 }}>
       <CardMedia
         component="img"
         alt="sivis logo"
@@ -45,4 +45,4 @@ const CustomCard = () => {
   );
 };
 
-export default CustomCard;
+export default CustomCardMui;

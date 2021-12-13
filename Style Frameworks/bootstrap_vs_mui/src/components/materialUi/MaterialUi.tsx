@@ -11,10 +11,11 @@ import {
   Typography,
   Toolbar,
 } from "@mui/material";
-import CustomDrawer from "./Drawer/CustomDrawer";
-import MuiAppbar from "./Appbar/MuiAppbar";
-import CustomCard from "./card/CustomCard";
-
+import CustomDrawer from "./drawer/CustomDrawer";
+import MuiAppbar from "./appbar/MuiAppbar";
+import CustomCardMui from "./card/CustomCardMui";
+import CustomTableMui from "./table/CustomTableMui";
+import { ITableRows } from "../../App";
 type Anchor = "top" | "left" | "bottom" | "right";
 
 export interface IVisibleMuiComponentState {
@@ -24,7 +25,12 @@ export interface IVisibleMuiComponentState {
   MuiTable: boolean;
 }
 
-const MaterialUi = () => {
+interface IMaterialUiProps {
+  rows: ITableRows[];
+  headers: string[];
+}
+
+const MaterialUi = (props: IMaterialUiProps) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   const testComponents: string[] = ["MuiCard", "MuiForm", "MuiTable"];
@@ -60,7 +66,10 @@ const MaterialUi = () => {
           toggleDrawer={toggleDrawer}
           setOpenComponent={setVisibleMuiComponent}
         />
-        {visibleMuiComponent.MuiCard ? <CustomCard /> : null}
+        {visibleMuiComponent.MuiCard ? <CustomCardMui /> : null}
+        {visibleMuiComponent.MuiTable ? (
+          <CustomTableMui rows={props.rows} headers={props.headers} />
+        ) : null}
       </Container>
     </div>
   );

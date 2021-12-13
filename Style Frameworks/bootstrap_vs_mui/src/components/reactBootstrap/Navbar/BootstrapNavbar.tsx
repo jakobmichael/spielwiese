@@ -41,7 +41,7 @@ const BootstrapNavbar = (props: IBootstrapNavbarProps) => {
                   <>
                     <NavDropdown.Divider />
                     <NavDropdown.Item
-                      href="#action/3.1"
+                      href=""
                       onClick={() => changeVisibleComponent(component)}
                     >
                       {component}
