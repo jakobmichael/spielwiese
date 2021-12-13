@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="aufgabe_21_2.css" />
+  </head>
+  <body>
+    <div id="bestellung">
+      <h3>Bestellung von Theaterkarten</h3>
+      <p>Bitte f&uuml;llen Sie die folgenden Eingabefelder aus:</p>
+      <form action="auswertung_21_2.php" method="GET">
+        <label for="vorname">Vorname:</label>
+        <input type="text" name="vorname" required />
+        <label for="nachname">Nachname:</label>
+        <input type="text" name="nachname" required />
+        <label for="mail">Emailadresse:</label>
+        <input type="email" name="mail" required />
+        <label for="preisgruppe">Preisgruppe:</label>
+        <select name="preisgruppe" size="1">
+          <option name="preisgruppe" value="1">
+            Preisgruppe 1 (34,00 Euro/21,50 Euro)
+          </option>
+          <option name="preisgruppe" value="2">
+            Preisgruppe 2 (34,00 Euro/17,00 Euro)
+          </option>
+          <option name="preisgruppe" value="3">
+            Preisgruppe 3 (26,50 Euro/13,25 Euro)
+          </option>
+          <option name="preisgruppe" value="4">
+            Preisgruppe 4 (19,50 Euro/9,75 Euro)
+          </option>
+          <option name="preisgruppe" value="5">
+            Preisgruppe 5 (11,50 Euro/5,75 Euro)
+          </option>
+        </select>
+        <label for="anzahl">Anzahl Eintrittskarten:</label>
+        <input name="anzahl" type="number" min="1" step="1" required>
+        <input type="checkbox" name="rabatt" value="ja" />
+        <label for="rabatt">Sch&uuml;er/Student</label>
+        <input type="checkbox" name="programm" value="ja" />
+        <label for="programm">Programmheft (3,-Euro)</label>
+        <input type="checkbox" name="parken" value="ja" />
+        <label for="parken">Parkgeb&uuml;hr (4,-Euro)</label>
+        <button type="submit">Abschicken</button>
+        <button type="reset">Zur&uuml;cksetzen</button>
+      </form>
+    </div>
+  </body>
+</html>

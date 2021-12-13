@@ -1,0 +1,18 @@
+#bestellung {
+    width:20vw;
+    height: 20vw;
+    margin: 2% 0 0 10%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(10, 13%);
+}
+
+button {
+    width: 80%;
+}

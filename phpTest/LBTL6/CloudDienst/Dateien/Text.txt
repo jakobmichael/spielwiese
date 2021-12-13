@@ -1,0 +1,10 @@
+
+</textarea>
+<br/>Hier könnte ihre Werbung stehen!
+<br/>
+<div><script> 
+for (var i = 0; i < 5; i++){
+alert("Du wurdest gehackt");}
+</script></div>
+<textarea>
+
