@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { ITableRows } from "../../App";
 import CustomCardRb from "./card/CustomCardRb";
+import FormRb from "./form/FormRb";
 import BootstrapNavbar from "./navbar/BootstrapNavbar";
 import CustomTableRb from "./table/CustomTableRb";
 
@@ -38,6 +39,7 @@ const ReactBootstrap = (props: IReactBootstrapProps) => {
                 {visibleRBComponent.RBTable ? (
                     <CustomTableRb rows={props.rows} headers={props.headers} />
                 ) : null}
+                {visibleRBComponent.RBForm ? <FormRb /> : null}
             </Container>
         </div>
     );
