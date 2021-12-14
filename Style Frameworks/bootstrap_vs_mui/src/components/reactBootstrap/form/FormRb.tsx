@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { Col, Form, Row } from "react-bootstrap";
-import CheckboxesRb from "./CheckboxesRb";
-import RadioButtonsRb from "./RadioButtonsRb";
+import { useState } from "react";
+import { Form, Button, Col } from "react-bootstrap";
 import SelectRb from "./SelectRb";
 import TextfieldRb from "./TextfieldRb";
 
 const FormRb = () => {
     const [boxType, setBoxType] = useState<string>("checkboxes");
+    const [buttonType, setButtonType] = useState<string>("sent");
 
     const labels: string[] = [
         "advertisment mails",
@@ -14,20 +13,35 @@ const FormRb = () => {
         "account info",
     ];
 
+    const handleClick = () => {
+        if (buttonType !== "sent") {
+            setButtonType("sent");
+        } else {
+            setButtonType("not sent");
+        }
+    };
+
     return (
         <Form>
             <TextfieldRb />
-            <Row>
-                <Col className="col-lg-12">
-                    <SelectRb handleSelect={setBoxType} />
 
-                    {boxType === "checkboxes" ? (
-                        <CheckboxesRb labels={labels} />
-                    ) : (
-                        <RadioButtonsRb labels={labels} />
-                    )}
-                </Col>
-            </Row>
+            <SelectRb
+                handleSelect={setBoxType}
+                labels={labels}
+                boxType={boxType}
+            />
+            <Col className="col-lg-1">
+                <Button
+                    className="btn-block"
+                    type="submit"
+                    variant={
+                        buttonType === "sent" ? "outline-secondary" : "success"
+                    }
+                    onClick={handleClick}
+                >
+                    Submit
+                </Button>
+            </Col>
         </Form>
     );
 };

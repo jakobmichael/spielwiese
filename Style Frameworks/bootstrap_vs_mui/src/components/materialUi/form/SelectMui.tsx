@@ -1,6 +1,7 @@
 import React from "react";
 import FormControl from "@mui/material/FormControl";
 import { InputLabel, Select, MenuItem } from "@mui/material";
+import classes from "../MaterialUi.module.scss";
 
 interface ISelectMuiProps {
     value: string;
@@ -12,6 +13,7 @@ const SelectMui = (props: ISelectMuiProps) => {
         <FormControl>
             <InputLabel id="demo-simple-select-label">Age</InputLabel>
             <Select
+                className={classes.Select}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={props.value}

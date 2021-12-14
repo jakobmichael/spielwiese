@@ -6,6 +6,7 @@ import { ITableRows } from "../../App";
 import MuiAppbar from "./appbar/MuiAppbar";
 import CustomDrawer from "./drawer/CustomDrawer";
 import FormMui from "./form/FormMui";
+import classes from "./MaterialUi.module.scss";
 
 export interface IVisibleMuiComponentState {
     [index: string]: boolean;

@@ -1,0 +1,15 @@
+//Bootstrap
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+// $font-family-base: 'Source Sans Pro',
+// sans-serif;
+
+$primary: #f29224;
+
+$theme-colors: ("primary": #f29224,
+    "secondary": #a0a4a7,
+    "light": #fff,
+);
+
+
+@import "../node_modules/bootstrap//scss/bootstrap.scss";

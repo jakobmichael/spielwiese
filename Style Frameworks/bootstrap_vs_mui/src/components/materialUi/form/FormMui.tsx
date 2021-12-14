@@ -1,16 +1,13 @@
-import React, { useState } from "react";
-import { Box } from "@mui/system";
-import TextFieldMui from "./TextFieldMui";
-import Fab from "@mui/material/Fab";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { FormGroup } from "react-bootstrap";
+import Button from "@mui/material/Button";
+import Fab from "@mui/material/Fab";
+import { SelectChangeEvent } from "@mui/material/Select";
+import { Box } from "@mui/system";
+import React, { useState } from "react";
 import CheckboxesMui from "./CheckboxesMui";
 import RadioButtonsMui from "./RadioButtonsMui";
-import { SelectChangeEvent } from "@mui/material/Select";
 import SelectMui from "./SelectMui";
-import Button from "@mui/material/Button";
+import TextFieldMui from "./TextFieldMui";
 
 const FormMui = () => {
     const [selectValue, setSelectValue] = useState<string>("checkboxes");
