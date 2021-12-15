@@ -5,44 +5,71 @@ import ReactBootstrap from "./components/reactBootstrap/ReactBootstrap";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 
 export interface ITableRows {
-    firstName: string;
-    lastName: string;
-    street: string;
-    phone: number;
-    plz: number;
+    name: string;
+    issues: number | string;
+    version: string;
+    updated: number | string;
+    created: number;
+    unpackedSize: number;
+    weeklyDownloads: number;
+    numberOfFiles: number;
 }
 
 const App = () => {
     const createData = (
-        firstName: string,
-        lastName: string,
-        street: string,
-        phone: number,
-        plz: number
+        name: string,
+        issues: number | string,
+        version: string,
+        updated: number | string,
+        created: number,
+        unpackedSize: number,
+        weeklyDownloads: number,
+        numberOfFiles: number
     ) => {
-        return { firstName, lastName, street, phone, plz };
+        return {
+            name,
+            issues,
+            version,
+            updated,
+            created,
+            unpackedSize,
+            weeklyDownloads,
+            numberOfFiles,
+        };
     };
 
     const headers: string[] = [
-        "FIRST NAME",
-        "LAST NAME",
-        "STREET",
-        "PHONE",
-        "PLZ",
+        "FRAMEWORK",
+        "VERSION",
+        "UPDATED",
+        "CREATED",
+        "ISSUES",
+        "SIZE MB",
+        "WEEKLY DOWNLOADS",
+        "FILES",
     ];
 
     const rows: ITableRows[] = [
-        createData("Sayuri", "Doctor", "Prospect Street", 12839022, 11782),
         createData(
-            "Donatianus",
-            "Negrini",
-            "Bridgeway Avenue",
-            21289339202,
-            22384
+            "material-ui / mui",
+            "-",
+            "0.20.2",
+            2018,
+            2014,
+            2.42,
+            92372,
+            1151
         ),
-        createData("Hema", "Skjeggestad", "Brewer Bouled", 904234400923, 19228),
-        createData("Theudobald", "Burke", "Victory Avenue", 1223787683, 379228),
-        createData("Kinsley", "Jewell", "Grime Avenue", 190182768881, 42002),
+        createData(
+            "react bootstrap",
+            162,
+            "2.0.3",
+            "12/2021",
+            2013,
+            1.35,
+            991345,
+            660
+        ),
     ];
 
     const theme = createTheme({
